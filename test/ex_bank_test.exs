@@ -3,6 +3,6 @@ defmodule ExBankTest do
   doctest ExBank
 
   test "greets the world" do
-    assert ExBank.hello() == :world
+    assert ExBank.hello() == :worlg
   end
 end
