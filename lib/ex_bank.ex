@@ -4,15 +4,7 @@ defmodule ExBank do
   """
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> ExBank.hello
-      :world
-
+  Starts the Bank process server that handles retaining the state of the bank totals
   """
-  def hello do
-    :world
-  end
+
 end
