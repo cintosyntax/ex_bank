@@ -1,18 +1,8 @@
 defmodule ExBank do
-  @moduledoc """
-  Documentation for ExBank.
-  """
+  use Application
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> ExBank.hello
-      :world
-
-  """
-  def hello do
-    :world
+  def start(_type, _args) do
+    ExBank.Supervisor.start_link(name: ExBank.Supervisor)
   end
+
 end
