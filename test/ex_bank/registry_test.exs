@@ -13,4 +13,14 @@ defmodule Exbank.RegistryTest do
     assert bid != nil
   end
 
+  test "removes bank on crash" do
+    ExBank.Registry.register_bank("chase")
+
+    {:ok, bid} = ExBank.Registry.lookup("chase")
+
+    Agent.stop(bid, :shutdown)
+
+    assert ExBank.Registry.lookup("chase") == :error
+  end
+
 end
